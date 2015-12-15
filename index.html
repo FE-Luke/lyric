@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./scripts/base.js"></script>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    #lyric{
+        overflow: hidden;
+        width: 800px;
+        height: 480px;
+        box-shadow: 0 0 5px black;
+        margin: 200px auto;
+
+    }
+    #lyric #words{
+        cursor: default;
+        transition: all 0.5s ease;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 20px;
+
+    }
+    #words li{
+        height: 48px;
+        line-height: 48px;
+    }
+    #words .sel{
+        color: red;
+    }
+    ul,li{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+</style>
+<body>
+    <audio src="./media/周杰伦 - 夜曲 [mqms].mp3" controls id="audio"></audio>
+    <div id="lyric">
+        <ul id="words" style="margin-top: 240px"></ul>
+    </div>
+</body>
+</html>
