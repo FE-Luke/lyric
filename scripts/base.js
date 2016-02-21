@@ -123,5 +123,12 @@ window.onload = function(){
             count=0;
         }
     }
+    audio.onseeked = function(){
+        var cur_time = audio.currentTime;
+        for(var _i = 0;_i <= lyricArray.length - 1;_i++){
+            if (cur_time>=lyricArray[_i].time&&cur_time<=lyricArray[_i + 1].time)
+                count = _i;
+        }
+    }
 
 };
