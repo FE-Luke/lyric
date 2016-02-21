@@ -113,7 +113,10 @@ window.onload = function(){
     audio.ontimeupdate = function(){
         var time = audio.currentTime;
         if(!vaildTime(time,count)) {
-            wordEl.querySelectorAll('li')[count].removeAttribute('class');
+            var wordsEl = wordEl.querySelectorAll('li');
+            for(var i=0;i<wordsEl.length;i++){
+                wordEl.querySelectorAll('li')[i].removeAttribute('class');
+            }
             count++;
         }
         wordEl.style.marginTop = (marTop-count*48)+'px';
